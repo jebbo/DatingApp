@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { MemberListComponent } from './members/member-list/member-list.component';
@@ -18,7 +17,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       {path:'members', component: MemberListComponent, canActivate: [AuthGuard]},
-      {path:'members/:id', component: MemberDetailComponent},
+      {path:'members/:username', component: MemberDetailComponent},
       {path:'lists', component: ListsComponent},
       {path:'messages', component: MessagesComponent},
     ]
